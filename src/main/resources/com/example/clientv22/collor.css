@@ -1,0 +1,50 @@
+.linear-grad2{
+   -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #3494E6, #EC6EAD);
+-fx-border-color: black;
+-fx-text-fill:black;
+-fx-border-radius:20;
+-fx-background-radius:20;
+}
+.tableW{
+-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #525252, #3d72b4);
+-fx-border-color: black;
+}
+
+  .table-view
+{    
+
+-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #ee9ca7, #ffdde1);
+   }
+
+.co1{
+-fx-background-color:#689CD2;
+
+
+-fx-border-color: black;
+-fx-border-radius:20;
+-fx-background-radius:20;
+}
+
+  .Hbox
+{    
+       -fx-background-color: linear-gradient(from 25% 25% to 100% 100%,  #ba5370, #f4e2d8);
+-fx-border-color: black;
+-fx-border-radius:20;
+-fx-background-radius:20;
+   }
+
+.buttons{
+-fx-background-color:#689CD2;
+-fx-border-color:black;
+-fx-border-radius:20;
+-fx-background-radius:20;
+}
+
+.borderPan{
+
+-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #ee9ca7, #ffdde1);
+
+
+
+}
+
