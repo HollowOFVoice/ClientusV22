@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="600.0" styleClass="borderPan" stylesheets="@collor.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clientv22.MainController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="600.0" styleClass="borderPan" stylesheets="@collor.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clientv22.controller.MainController">
    <top>
       <MenuBar styleClass="linear-grad2" stylesheets="@collor.css" BorderPane.alignment="CENTER">
         <menus>
@@ -21,22 +21,22 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Авторы">
             <items>
-              <MenuItem mnemonicParsing="false" text="Добавить/изменнник" />
+              <MenuItem mnemonicParsing="false" onAction="#addOrChangeAuthorAction" text="Добавить/изменнник" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Издательства">
             <items>
-              <MenuItem mnemonicParsing="false" text="Добавить/измена" />
+              <MenuItem mnemonicParsing="false" onAction="#addOrChangePublisherAction" text="Добавить/измена" />
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Города">
               <items>
-                <MenuItem mnemonicParsing="false" text="Добавить/изменить" />
-                  <Menu mnemonicParsing="false" text="Жанры">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Добавить/изменить" />
-                    </items>
-                  </Menu>
+                <MenuItem mnemonicParsing="false" onAction="#addOrChangeCityAction" text="Добавить/изменить" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Жанры">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#addOrChangeGenreAction" text="Добавить/изменить" />
               </items>
             </Menu>
         </menus>
@@ -46,13 +46,13 @@
       </MenuBar>
    </top>
    <center>
-      <TableView prefHeight="322.0" prefWidth="600.0" stylesheets="@collor.css" BorderPane.alignment="CENTER">
+      <TableView fx:id="bookTable" prefHeight="326.0" prefWidth="598.0" stylesheets="@collor.css" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn prefWidth="39.0" styleClass="co1" text="№" />
-          <TableColumn prefWidth="145.0" styleClass="co1" text="Название" />
-            <TableColumn minWidth="4.0" prefWidth="140.0" styleClass="co1" text="Автор" />
-            <TableColumn prefWidth="114.0" styleClass="co1" text="Жанр" />
-            <TableColumn prefWidth="159.0" styleClass="co1" text="Издательство" />
+          <TableColumn fx:id="columnNumber" prefWidth="39.0" styleClass="co1" text="№" />
+          <TableColumn fx:id="columnTitle" prefWidth="145.0" styleClass="co1" text="Название" />
+            <TableColumn fx:id="columnAuthor" minWidth="4.0" prefWidth="140.0" styleClass="co1" text="Автор" />
+            <TableColumn fx:id="columnGenre" prefWidth="114.0" styleClass="co1" text="Жанр" />
+            <TableColumn fx:id="columnPublisher" prefWidth="161.0" styleClass="co1" text="Издательство" />
         </columns>
          <BorderPane.margin>
             <Insets />
@@ -62,17 +62,17 @@
    <bottom>
       <HBox prefHeight="47.0" prefWidth="600.0" styleClass="Hbox" stylesheets="@collor.css" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" styleClass="buttons" stylesheets="@collor.css" text="Добавить">
+            <Button mnemonicParsing="false" onAction="#addBookAction" styleClass="buttons" stylesheets="@collor.css" text="Добавить">
                <HBox.margin>
                   <Insets left="10.0" top="10.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" styleClass="buttons" stylesheets="@collor.css" text="Измениьт">
+            <Button mnemonicParsing="false" onAction="#changeBookAction" styleClass="buttons" stylesheets="@collor.css" text="Измениьт">
                <HBox.margin>
                   <Insets left="10.0" top="10.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="12.0" prefWidth="71.0" styleClass="buttons" stylesheets="@collor.css" text="Удалить" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#deleteBookAction" prefHeight="12.0" prefWidth="71.0" styleClass="buttons" stylesheets="@collor.css" text="Удалить" textAlignment="CENTER">
                <HBox.margin>
                   <Insets left="10.0" top="10.0" />
                </HBox.margin>
