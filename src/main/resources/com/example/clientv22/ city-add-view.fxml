@@ -11,7 +11,7 @@
       <TextField fx:id="textTitle" layoutX="81.0" layoutY="43.0" prefHeight="25.0" prefWidth="200.0" styleClass="TextFilCity" stylesheets="@collor.css" />
       <Button fx:id="addCity" layoutX="21.0" layoutY="82.0" mnemonicParsing="false" styleClass="buttonCity" stylesheets="@collor.css" text="Добавить" />
       <Button fx:id="cancelCity" layoutX="101.0" layoutY="82.0" mnemonicParsing="false" styleClass="buttonCity" stylesheets="@collor.css" text="Не добавить" />
-      <Button fx:id="delete" layoutX="200.0" layoutY="82.0" mnemonicParsing="false" styleClass="buttonCity" stylesheets="@collor.css" text="Казнить" />
+      <Button fx:id="deleteCity" layoutX="200.0" layoutY="82.0" mnemonicParsing="false" styleClass="buttonCity" stylesheets="@collor.css" text="Удалить" />
       <ListView fx:id="dataLIst" layoutX="290.0" layoutY="29.0" prefHeight="200.0" prefWidth="200.0" styleClass="ListW" stylesheets="@collor.css" />
       <Label layoutX="21.0" layoutY="47.0" text="Назвянка" />
    </children>

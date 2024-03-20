@@ -1,6 +1,7 @@
 package com.example.clientv22.controller;
 
 
+import com.example.clientv22.service.HttpService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
@@ -68,7 +69,8 @@ public class MainController {
 
     @FXML
     void deleteBookAction(ActionEvent event) {
-
+        HttpService service = new HttpService();
+        System.out.println(service.get("http://localhost:2825/api/v1/books/all"));
     }
 
     @FXML

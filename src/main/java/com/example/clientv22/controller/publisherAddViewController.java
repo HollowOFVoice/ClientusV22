@@ -2,30 +2,28 @@ package com.example.clientv22.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
-public class AddAuthorViewController {
+public class publisherAddViewController {
 
     @FXML
-    private TextField TextLastname;
+    private ComboBox<?> ComboBoxCity1;
 
     @FXML
-    private Button addAuthor;
+    private Button addPublisher;
 
     @FXML
-    private Button cancelAuthorAdd;
+    private Button cancelPublisher;
 
     @FXML
     private ListView<?> dataList;
 
     @FXML
-    private Button deleteAuthor;
+    private Button deletePublisher;
 
     @FXML
-    private TextField textName;
-
-    @FXML
-    private TextField textSurname;
+    private TextField textTitle;
 
 }

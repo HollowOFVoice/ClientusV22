@@ -5,19 +5,19 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
-public class CityAddViewController {
+public class GenreAddViewController {
 
     @FXML
-    private Button addCity;
+    private Button addGenre;
 
     @FXML
-    private Button cancelCity;
+    private Button cancelGenre;
 
     @FXML
     private ListView<?> dataLIst;
 
     @FXML
-    private Button deleteCity;
+    private Button deleteGenre;
 
     @FXML
     private TextField textTitle;
