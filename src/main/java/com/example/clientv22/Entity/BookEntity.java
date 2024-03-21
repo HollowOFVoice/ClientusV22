@@ -12,11 +12,12 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class   BookEntity {
+public class BookEntity {
 
     private Long id;
 
     private String bookName;
+
 
     private AuthorEntity author;
 
