@@ -27,5 +27,9 @@ private Long id;
 
     private String surname;
 
-private List<BookEntity> books;
+    @Override
+    public String toString() {
+        return lastname + ' ' + name + ' ' + surname + ' ' ;
+
+    }
 }

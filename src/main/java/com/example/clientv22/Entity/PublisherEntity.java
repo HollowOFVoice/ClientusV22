@@ -21,7 +21,10 @@ public class PublisherEntity {
 
     private  CityEntity city;
 
-    private List<BookEntity> books;
 
 
+    @Override
+    public String toString() {
+        return  title + ' ' + city;
+    }
 }

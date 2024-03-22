@@ -11,7 +11,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 public class MainController {
-    BookService service = new BookService();
+
 
     @FXML
     private TableView<BookEntity> bookTable;
@@ -30,6 +30,7 @@ public class MainController {
 
     @FXML
     private TableColumn<BookEntity, String> columnTitle;
+     BookService service = new BookService();
 
 
     @FXML
@@ -101,7 +102,7 @@ public class MainController {
         columnAuthor.setCellValueFactory(new PropertyValueFactory<BookEntity, String>("author"));
         columnGenre.setCellValueFactory(new PropertyValueFactory<BookEntity, String>("genre"));
         columnNumber.setCellValueFactory(new PropertyValueFactory<BookEntity, String>("year"));
-        columnTitle.setCellValueFactory(new PropertyValueFactory<BookEntity, String>("title"));
+        columnTitle.setCellValueFactory(new PropertyValueFactory<BookEntity, String>("bookName"));
         columnPublisher.setCellValueFactory(new PropertyValueFactory<BookEntity, String>("publisher"));
         bookTable.setItems(service.getData());
     }

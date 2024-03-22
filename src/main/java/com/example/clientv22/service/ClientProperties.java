@@ -41,7 +41,7 @@ public class ClientProperties {
     private String deleteAuthor;
 
     public ClientProperties() {
-        try (InputStream input = MainApplication.class.getClassLoader().getResourceAsStream("config.propeties")) {
+        try (InputStream input = MainApplication.class.getClassLoader().getResourceAsStream("config.properties")) {
             System.out.println(input);
             properties.load(input);//загрузка свойства из файла
             allBook = properties.getProperty("book.getAll");

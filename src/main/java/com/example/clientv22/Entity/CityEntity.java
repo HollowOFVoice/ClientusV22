@@ -20,4 +20,6 @@ public class CityEntity {
     private String title;
 
     private List<PublisherEntity> publisher;
+
+
 }
