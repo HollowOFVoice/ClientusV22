@@ -11,6 +11,9 @@ import javafx.collections.ObservableList;
 import lombok.Getter;
 
 import java.lang.reflect.Type;
+import java.util.Comparator;
+
+import static java.util.Collections.sort;
 
 public class AuthorService {
     @Getter
@@ -47,18 +50,34 @@ public class AuthorService {
             throw new RuntimeException(respose.getMessage());
         }
     }
-
-
-    public void update(AuthorEntity data){
-        String temp = http.put(prop.getUpdateAuthor(), service.getJson(data));
-        DataResponse<AuthorEntity> respose = service.getObject(temp, dataType);
-        if (respose.isSuccess()){
-            this.data.add(respose.getData());
-
+    private void sort() {
+        data.sort(Comparator.comparing(AuthorEntity::getLastname));
+    }
+    public void update (AuthorEntity after, AuthorEntity before){
+        System.out.println(before);
+        System.out.println(after);
+        String temp = http.put(prop.getUpdateAuthor(),service.getJson(after));
+        DataResponse<AuthorEntity> response = service.getObject(temp, dataType);
+        if (response.isSuccess()){
+            this.data.remove(before);
+            this.data.add(after);
+            sort();
         }else{
-            throw new RuntimeException(respose.getMessage());
+            throw new RuntimeException(response.getMessage());
         }
     }
+
+
+//    public void update(AuthorEntity data){
+//        String temp = http.put(prop.getUpdateAuthor(), service.getJson(data));
+//        DataResponse<AuthorEntity> respose = service.getObject(temp, dataType);
+//        if (respose.isSuccess()){
+//            this.data.add(respose.getData());
+//
+//        }else{
+//            throw new RuntimeException(respose.getMessage());
+//        }
+//    }
 
     public void delete(AuthorEntity data){
         String temp = http.delete(prop.getDeleteAuthor(), data.getId());

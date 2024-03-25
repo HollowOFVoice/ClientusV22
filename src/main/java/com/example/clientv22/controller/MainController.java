@@ -2,13 +2,21 @@ package com.example.clientv22.controller;
 
 
 import com.example.clientv22.Entity.BookEntity;
+import com.example.clientv22.MainApplication;
 import com.example.clientv22.service.BookService;
 import com.example.clientv22.service.HttpService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class MainController {
 
@@ -40,7 +48,7 @@ public class MainController {
 
     @FXML
     void addOrChangeAuthorAction(ActionEvent event) {
-
+        MainApplication.showAuthorDialog();
     }
 
     @FXML
