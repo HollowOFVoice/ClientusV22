@@ -9,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -38,6 +39,8 @@ public class MainController {
 
     @FXML
     private TableColumn<BookEntity, String> columnTitle;
+    @FXML
+    private Button hehe;
      BookService service = new BookService();
 
 
@@ -63,6 +66,7 @@ public class MainController {
 
     @FXML
     void addOrChangePublisherAction(ActionEvent event) {
+        MainApplication.showPublisherDialog();
 
     }
 
@@ -70,7 +74,10 @@ public class MainController {
     void changeBookAction(ActionEvent event) {
 
     }
-
+    @FXML
+    void meme(ActionEvent event){
+       MainApplication.videoDialog();
+  }
     @FXML
     void closeAction(ActionEvent event) {
 

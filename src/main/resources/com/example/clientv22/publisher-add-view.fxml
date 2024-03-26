@@ -7,11 +7,10 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="242.0" prefWidth="506.0" styleClass="anchorPaCity" stylesheets="@collor.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clientv22.controller.publisherAddViewController">
    <children>
       <TextField fx:id="textTitle" layoutX="92.0" layoutY="23.0" styleClass="TextFil" stylesheets="@collor.css" />
-      <ComboBox fx:id="ComboBoxCity1" layoutX="92.0" layoutY="73.0" prefHeight="25.0" prefWidth="164.0" styleClass="TextFil" stylesheets="@collor.css" />
+      <ComboBox fx:id="comboBoxCity" layoutX="92.0" layoutY="73.0" prefHeight="25.0" prefWidth="164.0" styleClass="TextFil" stylesheets="@collor.css" />
       <ListView fx:id="dataList" layoutX="296.0" layoutY="23.0" prefHeight="200.0" prefWidth="200.0" styleClass="ListWCity" stylesheets="@collor.css" />
       <Button fx:id="addPublisher" layoutX="25.0" layoutY="138.0" mnemonicParsing="false" styleClass="buttonCity" stylesheets="@collor.css" text="Добавить" />
       <Button fx:id="cancelPublisher" layoutX="119.0" layoutY="138.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="73.0" styleClass="buttonCity" stylesheets="@collor.css" text="Откат" />

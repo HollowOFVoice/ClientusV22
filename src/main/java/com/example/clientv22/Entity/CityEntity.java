@@ -19,7 +19,8 @@ public class CityEntity {
     private Long id;
     private String title;
 
-    private List<PublisherEntity> publisher;
-
-
+    @Override
+    public String toString() {
+        return title;
+    }
 }

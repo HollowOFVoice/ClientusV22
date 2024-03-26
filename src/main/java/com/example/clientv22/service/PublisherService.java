@@ -1,6 +1,5 @@
 package com.example.clientv22.service;
 
-import com.example.clientv22.Entity.GenreEntity;
 import com.example.clientv22.Entity.PublisherEntity;
 import com.example.clientv22.Response.BaseResponse;
 import com.example.clientv22.Response.DataResponse;
@@ -50,7 +49,7 @@ public class PublisherService{
     }
 
 
-    public void update(PublisherEntity data) {
+    public void update(PublisherEntity data, PublisherEntity selectionElement) {
         String temp = http.put(prop.getUpdatePublisher(), service.getJson(data));
         DataResponse<PublisherEntity> respose = service.getObject(temp, dataType);
         if (respose.isSuccess()) {

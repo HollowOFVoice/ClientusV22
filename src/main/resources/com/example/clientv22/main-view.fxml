@@ -26,7 +26,7 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Издательства">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#addOrChangePublisherAction" text="Добавить/измена" />
+              <MenuItem fx:id="addPublisher" mnemonicParsing="false" onAction="#addOrChangePublisherAction" text="Добавить/измена" />
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Города">
@@ -79,6 +79,11 @@
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#meme" prefHeight="25.0" prefWidth="65.0" styleClass="buttons" stylesheets="@collor.css" text="Button">
+               <HBox.margin>
+                  <Insets left="250.0" top="10.0" />
+               </HBox.margin>
             </Button>
          </children>
          <BorderPane.margin>
