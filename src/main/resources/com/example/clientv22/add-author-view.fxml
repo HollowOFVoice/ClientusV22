@@ -11,7 +11,7 @@
       <TextField fx:id="textSurname" layoutX="80.0" layoutY="30.0" prefHeight="25.0" prefWidth="191.0" styleClass="TextFil" stylesheets="@collor.css" />
       <ListView fx:id="dataList" layoutX="282.0" layoutY="28.0" onMouseClicked="#onMouseClickDataList" prefHeight="221.0" prefWidth="278.0" styleClass="ListW" stylesheets="@collor.css" />
       <Button fx:id="addAuthor" layoutX="26.0" layoutY="207.0" mnemonicParsing="false" onAction="#addAction" onMouseClicked="#addAction" styleClass="butttt" stylesheets="@collor.css" text="Добавить" />
-      <Button fx:id="cancelAuthorAdd" layoutX="108.0" layoutY="207.0" mnemonicParsing="false" onAction="#cancelAction" styleClass="butttt" stylesheets="@collor.css" text="Отмена" />
+      <Button fx:id="cancelAuthorAdd" layoutX="108.0" layoutY="207.0" mnemonicParsing="false" onAction="#aaaAction" styleClass="butttt" stylesheets="@collor.css" text="Отмена" />
       <Button fx:id="deleteAuthor" layoutX="187.0" layoutY="207.0" mnemonicParsing="false" styleClass="butttt" stylesheets="@collor.css" text="Удалить" />
       <TextField fx:id="textLastname" layoutX="80.0" layoutY="158.0" prefHeight="25.0" prefWidth="191.0" styleClass="TextFil" stylesheets="@collor.css" />
       <TextField fx:id="textName" layoutX="80.0" layoutY="98.0" prefHeight="25.0" prefWidth="191.0" styleClass="TextFil" stylesheets="@collor.css" />

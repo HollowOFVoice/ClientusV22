@@ -10,7 +10,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
-
+import javafx.stage.Stage;
 
 
 public class AddAuthorViewController {
@@ -56,6 +56,8 @@ public class AddAuthorViewController {
        textLastname.clear();
         textName.clear();
         textSurname.clear();
+        Stage stage =(Stage) addAuthor.getScene().getWindow();
+        stage.close();
     }
 @FXML
 public void cancelAction(ActionEvent event){
@@ -78,10 +80,27 @@ public void cancelAction(ActionEvent event){
         AuthorEntity temp = dataList.getSelectionModel().getSelectedItem();
         return temp;
     }
+    @FXML
+    void aaaAction(ActionEvent event){
 
-
-
+        textLastname.clear();
+        textName.clear();
+        textSurname.clear();
+    }
+//    @FXML
+//    void onMouseClickCancelAuthor(MouseEvent event) {
+//        if (event.getButton().equals(MouseButton.PRIMARY)){
+//            if (event.getClickCount() == 2){
+//                addFlag = false;
+//                AuthorEntity temp = getSelectionElement();
+//                textSurname.setText(temp.Surname());
+//                textName.setText(temp.getName());
+//                textLastname.setText(temp.getLastname());
+//            }
+//        }
+//    }
 }
 
 
 
+//https://translated.turbopages.org/proxy_u/en-ru.ru.c5dd713f-66041c2e-dbb0404d-74722d776562/https/stackoverflow.com/questions/2712921/generic-solution-to-deselect-buttons-in-java
